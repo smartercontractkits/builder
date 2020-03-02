@@ -68,7 +68,7 @@ RUN set -ex \
 RUN yarn config set registry "http://registry.npmjs.org/"
 
 # Install goverage to capture go test coverage
-RUN go get -u github.com/smartcerontractkits/goverage
+RUN go get -u github.com/smartercontractkits/goverage
 RUN curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 \
       > "/usr/local/bin/cc-test-reporter" \
       && chmod +x "/usr/local/bin/cc-test-reporter"
