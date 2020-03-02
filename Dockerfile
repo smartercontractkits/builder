@@ -1,7 +1,7 @@
 # Start from the sgx-rust base image
 FROM baiduxlab/sgx-rust:1804-1.1.0
 
-# Add all the things we need to build chainlink
+# Add all the things we need to build nulink
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get install -y curl git gcc libssl1.0.0 build-essential jq lsb-release gdb
 
@@ -68,7 +68,7 @@ RUN set -ex \
 RUN yarn config set registry "http://registry.npmjs.org/"
 
 # Install goverage to capture go test coverage
-RUN go get -u github.com/smartcontractkit/goverage
+RUN go get -u github.com/smartcerontractkits/goverage
 RUN curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 \
       > "/usr/local/bin/cc-test-reporter" \
       && chmod +x "/usr/local/bin/cc-test-reporter"
